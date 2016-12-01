@@ -319,7 +319,7 @@ nav {
         height: em(72);
         border-radius: 100%;
         left: calc(50% - 40px);
-        bottom: -43px;
+        bottom: em(-42);
         z-index: 1000;
         div {
             position: absolute;
@@ -353,7 +353,7 @@ nav {
         height: em(72);
         border-radius: 100%;
         left: calc(50% - 40px);
-        top: -30px;
+        top: em(-30);
         z-index: 1000;
         div {
             position: absolute;

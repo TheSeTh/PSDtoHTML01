@@ -262,7 +262,7 @@ nav {
     height: 4.5em;
     border-radius: 100%;
     left: calc(50% - 40px);
-    bottom: -43px;
+    bottom: -2.625em;
     z-index: 1000; }
     .services .briefCaseWrap div {
       position: absolute;
@@ -292,7 +292,7 @@ nav {
     height: 4.5em;
     border-radius: 100%;
     left: calc(50% - 40px);
-    top: -30px;
+    top: -1.875em;
     z-index: 1000; }
     .work .briefCaseWrap div {
       position: absolute;
