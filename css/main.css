@@ -250,7 +250,7 @@ nav {
   .work .wrap ~ .wrap {
     position: relative;
     top: unset;
-    bottom: -2.625em; }
+    bottom: -2.5625em; }
 
 .quotes {
   position: relative;
@@ -295,7 +295,7 @@ nav {
         border-color: #21c2f8; }
   .quotes .wrap ~ .wrap {
     top: unset;
-    bottom: -2.625em; }
+    bottom: -2.5625em; }
 
 .mySkills {
   position: relative;
