@@ -231,7 +231,7 @@ nav {
     text-align: center;
     overflow: hidden;
     z-index: 1;
-    .wrap {
+    .wrap:first-child {
         top: em(-30);
     }
     h1 {
@@ -288,7 +288,7 @@ nav {
     #fourth_text {
         margin-bottom: em(100);
     }
-    .wrap ~ .wrap {
+    .wrap {
         top: unset;
         bottom: em(-41);
     }
@@ -302,7 +302,7 @@ nav {
     overflow: hidden;
     margin-top: em(-1);
     z-index: 1;  
-    .wrap {
+    .wrap:first-child {
         top: em(-30);
     }
     h1 {
@@ -320,7 +320,7 @@ nav {
         margin-top: em(80);
         margin-bottom: em(80);
     }
-    .wrap ~ .wrap{
+    .wrap{
         top: unset;
         bottom: em(-41);
     }      
@@ -334,7 +334,7 @@ nav {
     margin-top: em(-1);
     background: transparent;
     z-index: 1;
-    .wrap {
+    .wrap:first-child {
         top: em(-30);
     }
     .slidePics > img {
@@ -384,7 +384,7 @@ radial-gradient(at left, black 4%, transparent 10%),radial-gradient(at left, bla
         }
         z-index: 1000;
     }
-    .wrap ~ .wrap{
+    .wrap{
         top: unset;
         bottom: em(-41);
     }  
@@ -398,7 +398,7 @@ radial-gradient(at left, black 4%, transparent 10%),radial-gradient(at left, bla
     overflow: hidden;
     margin-top: em(-1);
     z-index: 1;
-    .wrap {
+    .wrap:first-child {
         top: em(-30);
     }
 }

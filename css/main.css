@@ -187,7 +187,7 @@ nav {
   text-align: center;
   overflow: hidden;
   z-index: 1; }
-  .services .wrap {
+  .services .wrap:first-child {
     top: -1.875em; }
   .services h1 {
     margin-top: 2.5em;
@@ -231,7 +231,7 @@ nav {
       font-size: 0pt; }
   .services #fourth_text {
     margin-bottom: 6.25em; }
-  .services .wrap ~ .wrap {
+  .services .wrap {
     top: unset;
     bottom: -2.5625em; }
 
@@ -243,7 +243,7 @@ nav {
   overflow: hidden;
   margin-top: -0.0625em;
   z-index: 1; }
-  .work .wrap {
+  .work .wrap:first-child {
     top: -1.875em; }
   .work h1 {
     margin-top: 3.125em; }
@@ -256,7 +256,7 @@ nav {
   .work button {
     margin-top: 5em;
     margin-bottom: 5em; }
-  .work .wrap ~ .wrap {
+  .work .wrap {
     top: unset;
     bottom: -2.5625em; }
 
@@ -269,7 +269,7 @@ nav {
   margin-top: -0.0625em;
   background: transparent;
   z-index: 1; }
-  .quotes .wrap {
+  .quotes .wrap:first-child {
     top: -1.875em; }
   .quotes .slidePics > img {
     width: 100%;
@@ -308,7 +308,7 @@ nav {
       .quotes .slideBtn button:hover {
         background: #21c2f8;
         border-color: #21c2f8; }
-  .quotes .wrap ~ .wrap {
+  .quotes .wrap {
     top: unset;
     bottom: -2.5625em; }
 
@@ -320,7 +320,7 @@ nav {
   overflow: hidden;
   margin-top: -0.0625em;
   z-index: 1; }
-  .mySkills .wrap {
+  .mySkills .wrap:first-child {
     top: -1.875em; }
 
 /*# sourceMappingURL=main.css.map */
