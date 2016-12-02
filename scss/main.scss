@@ -63,7 +63,6 @@ button {
     left: -webkit-calc(50% - 40px);
     left: -moz-calc(50% - 40px);
     left: calc(50% - 40px);
-    top: em(480);
     z-index: 1000;
     div {
         position: absolute;
@@ -154,14 +153,20 @@ nav {
         }
     }
 }
-.introPic {
+.intro {
     position: relative;
-    overflow: hidden;
-    img {         
+    overflow: hidden;  
+    height: em(436);
+    margin-bottom: em(-36);
+    img { 
         width: 100%;
         height: em(400);
     }
+    .wrap {
+        bottom: 0;
+    }
 }
+
 
 .aboutMe {
     position: relative;
@@ -208,7 +213,6 @@ nav {
         text-align: center;
     }
     .wrap {
-        top: unset;
         bottom: em(-52);
     }
 }
@@ -289,7 +293,6 @@ nav {
         margin-bottom: em(100);
     }
     .wrap {
-        top: unset;
         bottom: em(-41);
     }
 }
@@ -320,8 +323,7 @@ nav {
         margin-top: em(80);
         margin-bottom: em(80);
     }
-    .wrap{
-        top: unset;
+    .wrap {
         bottom: em(-41);
     }      
 }
@@ -384,8 +386,7 @@ radial-gradient(at left, black 4%, transparent 10%),radial-gradient(at left, bla
         }
         z-index: 1000;
     }
-    .wrap{
-        top: unset;
+    .wrap {
         bottom: em(-41);
     }  
 }
