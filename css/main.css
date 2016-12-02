@@ -1,3 +1,4 @@
+/* Default*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
 * {
   margin: 0;
@@ -46,6 +47,8 @@ button {
   width: 5em;
   height: 4.5em;
   border-radius: 100%;
+  left: -webkit-calc(50% - 40px);
+  left: -moz-calc(50% - 40px);
   left: calc(50% - 40px);
   top: 30em;
   z-index: 1000; }
@@ -142,6 +145,8 @@ nav {
     display: block;
     position: absolute;
     top: 3.125em;
+    left: -webkit-calc(50% - 2.4em);
+    left: -moz-calc(50% - 2.4em);
     left: calc(50% - 2.4em);
     background: white;
     padding-top: 0.3125em;
@@ -152,6 +157,8 @@ nav {
     height: 12.5em;
     border-radius: 100%;
     margin-top: 1.875em;
+    margin-left: -webkit-calc(50% - 100px);
+    margin-left: -moz-calc(50% - 100px);
     margin-left: calc(50% - 100px); }
   .aboutMe h2 {
     margin-top: 1.875em;
@@ -248,9 +255,8 @@ nav {
       min-height: 13.875em; }
   .work button {
     margin-top: 5em;
-    margin-bottom: 1.875em; }
+    margin-bottom: 5em; }
   .work .wrap ~ .wrap {
-    position: relative;
     top: unset;
     bottom: -2.5625em; }
 
@@ -261,6 +267,7 @@ nav {
   text-align: center;
   overflow: hidden;
   margin-top: -0.0625em;
+  background: transparent;
   z-index: 1; }
   .quotes .wrap {
     top: -1.875em; }
@@ -275,13 +282,19 @@ nav {
     width: 100%;
     height: 100%;
     background-color: rgba(34, 37, 52, 0.6);
+    background-image: -webkit-radial-gradient(at left, black 2%, transparent 10%), -webkit-radial-gradient(at left, black 4%, transparent 10%), -webkit-radial-gradient(at left, black 4%, transparent 10%);
+    background-image: -moz-radial-gradient(at left, black 2%, transparent 10%), -moz-radial-gradient(at left, black 4%, transparent 10%), -moz-radial-gradient(at left, black 4%, transparent 10%);
+    background-image: -o-radial-gradient(at left, black 2%, transparent 10%), -o-radial-gradient(at left, black 4%, transparent 10%), -o-radial-gradient(at left, black 4%, transparent 10%);
     background-image: radial-gradient(at left, black 2%, transparent 10%), radial-gradient(at left, black 4%, transparent 10%), radial-gradient(at left, black 4%, transparent 10%);
+    -webkit-background-size: 0.25em 0.25em;
     background-size: 0.25em 0.25em;
     background-position: 0 0;
     z-index: 2; }
   .quotes .slideBtn {
     position: absolute;
     bottom: 20%;
+    left: -webkit-calc(50% - 52px);
+    left: -moz-calc(50% - 52px);
     left: calc(50% - 52px);
     z-index: 1000; }
     .quotes .slideBtn button {

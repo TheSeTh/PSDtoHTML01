@@ -1,4 +1,4 @@
-$browser-context: 16; // Default
+$browser-context: 16; /* Default*/
 
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
@@ -60,6 +60,8 @@ button {
     width: em(80);
     height: em(72);
     border-radius: 100%;
+    left: -webkit-calc(50% - 40px);
+    left: -moz-calc(50% - 40px);
     left: calc(50% - 40px);
     top: em(480);
     z-index: 1000;
@@ -177,6 +179,8 @@ nav {
         display: block;
         position: absolute;
         top: em(50);
+        left: -webkit-calc(50% - 2.4em);
+        left: -moz-calc(50% - 2.4em);
         left: calc(50% - 2.4em);
         background: white;
         padding-top: em(5);
@@ -188,6 +192,8 @@ nav {
         height: em(200);
         border-radius: 100%;
         margin-top: em(30);
+        margin-left: -webkit-calc(50% - 100px);
+        margin-left: -moz-calc(50% - 100px);
         margin-left: calc(50% - 100px);
     }
     h2 {
@@ -312,10 +318,9 @@ nav {
     }
     button {
         margin-top: em(80);
-        margin-bottom: em(30);
+        margin-bottom: em(80);
     }
     .wrap ~ .wrap{
-        position: relative;
         top: unset;
         bottom: em(-41);
     }      
@@ -327,6 +332,7 @@ nav {
     text-align: center;
     overflow: hidden;
     margin-top: em(-1);
+    background: transparent;
     z-index: 1;
     .wrap {
         top: em(-30);
@@ -343,15 +349,24 @@ nav {
         width: 100%;
         height: 100%;
         background-color: rgba(34, 37, 52, 0.6);
+        background-image: -webkit-radial-gradient(at left, black 2%, transparent 10%),
+-webkit-radial-gradient(at left, black 4%, transparent 10%),-webkit-radial-gradient(at left, black 4%, transparent 10%);
+        background-image: -moz-radial-gradient(at left, black 2%, transparent 10%),
+-moz-radial-gradient(at left, black 4%, transparent 10%),-moz-radial-gradient(at left, black 4%, transparent 10%);
+        background-image: -o-radial-gradient(at left, black 2%, transparent 10%),
+-o-radial-gradient(at left, black 4%, transparent 10%),-o-radial-gradient(at left, black 4%, transparent 10%);
         background-image: radial-gradient(at left, black 2%, transparent 10%),
 radial-gradient(at left, black 4%, transparent 10%),radial-gradient(at left, black 4%, transparent 10%);
-        background-size: em(4) em(4);
+        -webkit-background-size: em(4) em(4);
+                background-size: em(4) em(4);
         background-position: 0 0;
         z-index: 2;
     }
     .slideBtn {
         position: absolute;
         bottom: 20%;
+        left: -webkit-calc(50% - 52px);
+        left: -moz-calc(50% - 52px);
         left: calc(50% - 52px);
         button {
             background: transparent;
