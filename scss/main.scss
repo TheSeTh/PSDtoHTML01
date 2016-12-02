@@ -98,7 +98,7 @@ button {
 
 nav {
     position: relative;
-    height: em(70);
+    min-height: em(70);
     .logo {
         display: inline-block;
         margin-left: em(20);
@@ -111,6 +111,8 @@ nav {
     .logoText {
         display: inline-block;
         font-size: 1.5em;
+        padding-top: em(10);
+        padding-bottom: em(10);
         p {
             font-weight: 400;
             color: #3e4150;
