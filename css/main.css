@@ -454,33 +454,21 @@ nav {
     margin-top: 3.125em; }
   .work .imgContainer {
     margin-top: 4.375em;
-    -webkit-transform: translateX(-webkit-calc(50% - 160px));
-    -moz-transform: translateX(-moz-calc(50% - 160px));
-    -ms-transform: translateX(calc(50% - 160px));
-    -o-transform: translateX(calc(50% - 160px));
-    transform: translateX(calc(50% - 160px)); }
+    margin-left: calc((100% - 320px)/2); }
     .work .imgContainer img {
       float: left;
       max-width: 20em;
       min-height: 13.9375em; }
     @media (min-width: 640px) {
       .work .imgContainer {
-        -webkit-transform: translateX(-webkit-calc(50% - 320px));
-        -moz-transform: translateX(-moz-calc(50% - 320px));
-        -ms-transform: translateX(calc(50% - 320px));
-        -o-transform: translateX(calc(50% - 320px));
-        transform: translateX(calc(50% - 320px)); } }
+        margin-left: calc((100% - 640px)/2); } }
     @media (min-width: 960px) {
       .work .imgContainer {
-        -webkit-transform: translateX(-webkit-calc(50% - 480px));
-        -moz-transform: translateX(-moz-calc(50% - 480px));
-        -ms-transform: translateX(calc(50% - 480px));
-        -o-transform: translateX(calc(50% - 480px));
-        transform: translateX(calc(50% - 480px)); } }
+        margin-left: calc((100% - 960px)/2); } }
     @media (min-width: 1280px) {
       .work .imgContainer {
         max-width: 80em;
-        transform: translateX(calc(50vw - 640px)); } }
+        margin-left: calc((100% - 1280px)/2); } }
   .work button {
     margin-top: 5em;
     margin-bottom: 5em; }

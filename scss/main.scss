@@ -551,33 +551,21 @@ nav {
     }
     .imgContainer {
         margin-top: em(70);
-        -webkit-transform: translateX(-webkit-calc(50% - 160px));
-        -moz-transform: translateX(-moz-calc(50% - 160px));
-        -ms-transform: translateX(calc(50% - 160px));
-        -o-transform: translateX(calc(50% - 160px));
-        transform: translateX(calc(50% - 160px));
+        margin-left: calc((100% - 320px)/2);
         img {
             float: left;
             max-width: em(320);
             min-height: em(223);
         }
         @media (min-width: 640px) {
-            -webkit-transform: translateX(-webkit-calc(50% - 320px));
-            -moz-transform: translateX(-moz-calc(50% - 320px));
-            -ms-transform: translateX(calc(50% - 320px));
-            -o-transform: translateX(calc(50% - 320px));
-            transform: translateX(calc(50% - 320px));
+            margin-left: calc((100% - 640px)/2);
         }
         @media (min-width: 960px) {
-            -webkit-transform: translateX(-webkit-calc(50% - 480px));
-            -moz-transform: translateX(-moz-calc(50% - 480px));
-            -ms-transform: translateX(calc(50% - 480px));
-            -o-transform: translateX(calc(50% - 480px));
-            transform: translateX(calc(50% - 480px));
+            margin-left: calc((100% - 960px)/2);
         }
         @media (min-width: 1280px) {
             max-width: em(1280);
-            transform: translateX(calc(50vw - 640px));
+            margin-left: calc((100% - 1280px)/2);
         }
     }
     button {
