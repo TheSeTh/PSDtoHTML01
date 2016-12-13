@@ -4,6 +4,10 @@
 <head>
     <link href="./css/main.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.createElement('picture');
+    </script>
+    <script src="./js/picturefill.min.js" async></script>
     <script src="https://use.fontawesome.com/4d99a96fe5.js"></script>
     <script src="./js/index.js"></script>
 </head>
@@ -24,11 +28,65 @@
             </div>
         </div>
     </header>
-    <nav>
+    <nav id="home">
+        <div class="desktopMenu">
+            <a href="#home">
+                <h3>HOME</h3>
+            </a>
+            <span class="expandable" role="button" tabindex="1">
+                <h3>STUFF</h3>
+                <div class="deskExpanded" id="deskSubMenu_1">
+                    <a href="#services">
+                        <h3>LONGER ITEM 1</h3>
+                    </a>
+                    <a href="#services">
+                        <h3>LONGEST ITEM 2</h3>
+                    </a>
+                </div>
+            </span>
+            <span class="expandable" role="button" tabindex="2">
+                <h3>WORK</h3>
+                <div class="deskExpanded" id="deskSubMenu_2">
+                    <a href="#work">
+                        <h3>ITEM 1</h3>
+                    </a>
+                    <a href="#work">
+                        <h3>ITEM 2</h3>
+                    </a>
+                </div>
+            </span>
+            <div class="logo">
+                <img src="./images/No-logo.svg">
+                <p>Comp<span>any</span></p>
+            </div>
+            <span class="expandable" role="button" tabindex="3">
+                <h3>QUOTES</h3>
+                <div class="deskExpanded" id="deskSubMenu_3">
+                    <a href="#quotes">
+                        <h3>ITEM 1</h3>
+                    </a>
+                    <a href="#quotes">
+                        <h3>ITEM 2</h3>
+                    </a>
+                </div>
+            </span>
+            <span class="expandable" role="button" tabindex="4">
+                <h3>SKILLS</h3>
+                <div class="deskExpanded" id="deskSubMenu_4">
+                    <a href="#skills">
+                        <h3>ITEM 1</h3>
+                    </a>
+                    <a href="#skills">
+                        <h3>ITEM 2</h3>
+                    </a>
+                </div>
+            </span>
+            <a href="#about">
+                <h3>ABOUT</h3>
+            </a>
+        </div>
         <div class="logo">
             <img src="./images/No-logo.svg">
-        </div>
-        <div class="logoText">
             <p>Comp<span>any</span></p>
         </div>
         <div class="menu">
@@ -42,11 +100,87 @@
             </div>
         </div>
     </nav>
+    <div class="hamExpanded">
+        <a href="#home">
+            <h3>HOME</h3>
+        </a>
+        <hr>
+        <a class="expandable" role="button" tabindex="1">
+            <h3>STUFF</h3>
+            <h3>&or;</h3>
+        </a>
+        <hr>
+        <span id="subMenu_2">
+            <a href="#services">
+                <h3>ITEM 1</h3>
+            </a>
+            <hr>
+            <a href="#services">
+                <h3>ITEM 2</h3>
+            </a>
+            <hr>
+        </span>
+        <a class="expandable" role="button" tabindex="2">
+            <h3>WORK</h3>
+            <h3>&or;</h3>
+        </a>
+        <hr>
+        <span id="subMenu_3">
+            <a href="#work">
+                <h3>ITEM 1</h3>
+            </a>
+            <hr>
+            <a href="#work">
+                <h3>ITEM 2</h3>
+            </a>
+            <hr>
+        </span>
+        <a class="expandable" role="button" tabindex="3">
+            <h3>QUOTES</h3>
+            <h3>&or;</h3>
+        </a>
+        <hr>
+        <span id="subMenu_4">
+            <a href="#quotes">
+                <h3>ITEM 1</h3>
+            </a>
+            <hr>
+            <a href="#quotes">
+                <h3>ITEM 2</h3>
+            </a>
+            <hr>
+        </span>
+        <a class="expandable" role="button" tabindex="4">
+            <h3>SKILLS</h3>
+            <h3>&or;</h3>
+        </a>
+        <hr>
+        <span id="subMenu_5">
+            <a href="#skills">
+                <h3>ITEM 1</h3>
+            </a>
+            <hr>
+            <a href="#skills">
+                <h3>ITEM 2</h3>
+            </a>
+            <hr>
+        </span>
+        <a href="#about">
+            <h3>ABOUT</h3>
+        </a>
+        <hr>
+    </div>
     <section class="intro">
-        <img src="./images/intropic.jpg">
+        <picture>
+            <source srcset="./images/intropiclarger.jpg" media="(min-width: 501px)">
+            <source srcset="./images/intropicxxl.jpg" media="(min-width: 1000px)">
+            <source srcset="./images/intropicxxlx2.jpg" media="(min-width: 1440px)">
+            <source srcset="./images/intropicxxlx3.jpg" media="(min-width: 1920px)">
+            <img srcset="./images/intropic.jpg" alt="">
+        </picture>
         <div class="wrap">
             <div>
-                <i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-lightbulb-o fa-2x" aria-hidden="true" tabindex="-1"></i>
             </div>
         </div>
     </section>
@@ -57,12 +191,12 @@
         <img src="./images/facepic.jpg">
         <h2>OLD GUY</h2>
         <div class="info">
-            <h3>Gregorio Samsa, svegliandosi una mattina da sogni agitati, si trov&ograve; trasformato, nel suo letto, in un enorme
-                insetto immondo.<br><br> Riposava sulla schiena, dura come una corazza, e sollevando un poco il capo vedeva il suo
-                ventre arcuato, bruno e diviso in tanti segmenti ricurvi, in cima a cui la coperta da letto, vicina a scivolar
-                gi&ugrave; tutta, si manteneva a fatica.<br><br> Le gambe, numerose e sottili da far piet&agrave;, rispetto alla sua corporatura
-                normale, tremolavano senza tregua in un confuso luccichio dinanzi ai suoi occhi. Cosa m'&egrave; avvenuto? pens&ograve;.
-                Non era un sogno. </h3>
+            <h3>Gregorio Samsa, svegliandosi una mattina da sogni agitati, si trov&ograve; trasformato, nel suo letto, in un
+                enorme insetto immondo.<br><br> Riposava sulla schiena, dura come una corazza, e sollevando un poco il capo
+                vedeva il suo ventre arcuato, bruno e diviso in tanti segmenti ricurvi, in cima a cui la coperta da letto,
+                vicina a scivolar gi&ugrave; tutta, si manteneva a fatica.<br><br> Le gambe, numerose e sottili da far piet&agrave;,
+                rispetto alla sua corporatura normale, tremolavano senza tregua in un confuso luccichio dinanzi ai suoi occhi.
+                Cosa m'&egrave; avvenuto? pens&ograve;. Non era un sogno. </h3>
         </div>
         <button>
             <dl>
@@ -73,80 +207,94 @@
         </div>
         <div class="wrap">
             <div>
-                <i class="fa fa-flask fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-flask fa-2x" aria-hidden="true" tabindex="-1"></i>
             </div>
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="wrap">
             <div>
-                <i class="fa fa-flask fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-flask fa-2x" aria-hidden="true" tabindex="-1"></i>
             </div>
-        </div>           
+        </div>
         <h1>I ALWAYS DO<br>GREAT SERVICES</h1>
-        <div class="servButtons" id="first_btn">
-            <div>
-                <i class="fa fa-plus" aria-hidden="true"></i>
+        <div class="servButtonsContainer">
+            <div class="singleButtonContainer">
+                <div class="servButtons" id="first_btn">
+                    <div>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3>STUFF 1</h3>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div class="servTextContent" id="first_text">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu lacinia odio, id sollicitudin orci.
+                        Duis ut ligula at neque iaculis commodo. Phasellus tempor ex at dui consequat efficitur. Aenean egestas
+                        tellus at enim rhoncus, at pellentesque justo ullamcorper. Mauris ac rhoncus velit.</h3>
+                </div>
             </div>
-            <div>
-                <h3>STUFF 1</h3>
+            <div class="singleButtonContainer">
+                <div class="servButtons" id="second_btn">
+                    <div>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3>STUFF 2</h3>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div class="servTextContent" id="second_text">
+                    <h3>Maecenas cursus mi tortor, ullamcorper volutpat sapien auctor a. Sed consequat et nisl in volutpat. Etiam
+                        consectetur, orci non pulvinar sodales, dolor turpis mattis ex, at efficitur mi odio ut lacus.</h3>
+                </div>
             </div>
-            <div>
+            <div class="singleButtonContainer">
+                <div class="servButtons" id="third_btn">
+                    <div>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3>STUFF 3</h3>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div class="servTextContent" id="third_text">
+                    <h3>Proin nulla felis, volutpat nec arcu at, convallis suscipit neque. Ut nec lorem laoreet, efficitur libero
+                        non, tempus risus. Sed eu tincidunt eros.</h3>
+                </div>
             </div>
-        </div>
-        <div id="first_text">
-            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu lacinia odio, id sollicitudin orci. Duis ut ligula at neque iaculis commodo. Phasellus tempor ex at dui consequat efficitur. Aenean egestas tellus at enim rhoncus, at pellentesque justo ullamcorper. Mauris ac rhoncus velit.</h3>
-        </div>
-        <div class="servButtons" id="second_btn">
-            <div>
-                <i class="fa fa-plus" aria-hidden="true"></i>
+            <div class="singleButtonContainer">
+                <div class="servButtons" id="fourth_btn">
+                    <div>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                        <h3>STUFF 4</h3>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div class="servTextContent" id="fourth_text">
+                    <h3>Pellentesque iaculis suscipit orci. Nam non congue turpis, non pretium lectus.</h3>
+                </div>
             </div>
-            <div>
-                <h3>STUFF 2</h3>
-            </div>
-            <div>
-            </div>
-        </div>
-        <div id="second_text">
-            <h3>Maecenas cursus mi tortor, ullamcorper volutpat sapien auctor a. Sed consequat et nisl in volutpat. Etiam consectetur, orci non pulvinar sodales, dolor turpis mattis ex, at efficitur mi odio ut lacus.</h3>
-        </div>
-        <div class="servButtons" id="third_btn">
-            <div>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-            </div>
-            <div>
-                <h3>STUFF 3</h3>
-            </div>
-            <div>
-            </div>
-        </div>
-        <div id="third_text">
-            <h3>Proin nulla felis, volutpat nec arcu at, convallis suscipit neque. Ut nec lorem laoreet, efficitur libero non, tempus risus. Sed eu tincidunt eros.</h3>
-        </div>
-        <div class="servButtons" id="fourth_btn">
-            <div>
-                <i class="fa fa-plus" aria-hidden="true"></i>
-            </div>
-            <div>
-                <h3>STUFF 4</h3>
-            </div>
-            <div>
-            </div>
-        </div>
-        <div id="fourth_text">
-            <h3>Pellentesque iaculis suscipit orci. Nam non congue turpis, non pretium lectus.</h3>
         </div>
         <div class="wrap">
             <div>
-                <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-briefcase fa-2x" aria-hidden="true" tabindex="-1"></i>
             </div>
         </div>
     </section>
-    <section class="work">
+    <section class="work" id="work">
         <div class="wrap">
             <div>
-                <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-briefcase fa-2x" aria-hidden="true" tabindex="-1"></i>
             </div>
         </div>
         <h1>EVERYDAY<br>I DO MY BEST</h1>
@@ -167,26 +315,48 @@
         </button>
         <div class="wrap">
             <div>
-                <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-heart fa-2x" aria-hidden="true" tabindex="-1"></i>
             </div>
         </div>
     </section>
-    <section class="quotes">
+    <section class="quotes" id="quotes">
         <div class="wrap">
             <div>
-                <i class="fa fa-heart fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-heart fa-2x" aria-hidden="true" tabindex="-1"></i>
             </div>
         </div>
         <div class="slidePics">
-            <img src="./images/pontile.jpg">
+            <picture>
+                <source srcset="./images/pontilelarger.jpg" media="(min-width: 500px)">
+                <source srcset="./images/pontilexxl.jpg" media="(min-width: 1000px)">
+                <source srcset="./images/pontilexxlx2.jpg" media="(min-width: 1440px)">
+                <source srcset="./images/pontilexxlx3.jpg" media="(min-width: 1920px)">
+                <img srcset="./images/pontile.jpg" alt="">
+            </picture>
+        </div>
+        <div class="quotesContainer" id="quotesCont">
+            <div>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu lacinia odio, id sollicitudin orci. Duis
+                    ut ligula at neque iaculis commodo.</h2>
+                <h3>Good Guy</h3>
+            </div>
+            <div>
+                <h2>Proin nulla felis, volutpat nec arcu at, convallis suscipit neque. Ut nec lorem laoreet, efficitur libero
+                    non, tempus risus.</h2>
+                <h3>Fine Guy</h3>
+            </div>
+            <div>
+                <h2>Pellentesque iaculis suscipit orci. Nam non congue turpis, non pretium lectus.</h2>
+                <h3>Anonymous</h3>
+            </div>
         </div>
         <div class="slideBtn">
-            <button>
+            <button id="leftClick">
                 <dl>
                     <h2><</h2>
                 </dl>
             </button>
-            <button>
+            <button id="rightClick">
                 <dl>
                     <h2>></h2>
                 </dl>
@@ -194,16 +364,104 @@
         </div>
         <div class="wrap">
             <div>
-                <i class="fa fa-book fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-book fa-2x" aria-hidden="true" tabindex="-1"></i>
             </div>
         </div>
     </section>
-    <section class="mySkills">
+    <section class="mySkills" id="skills">
         <div class="wrap">
             <div>
-                <i class="fa fa-book fa-2x" aria-hidden="true"></i>
+                <i class="fa fa-book fa-2x" aria-hidden="true" tabindex="-1"></i>
+            </div>
+        </div>
+        <h1>CHECK MY SKILLS</h1>
+        <div class="percentBars">
+            <div class="bar">
+                <h3>ADOBE PHOTOSHOP</h3>
+                <h3>90%</h3>
+                <div class="innerBar">
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <h3>ADOBE ILLUSTRATOR</h3>
+                <h3>70%</h3>
+                <div class="innerBar">
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <h3>WORDPRESS</h3>
+                <h3>80%</h3>
+                <div class="innerBar">
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <h3>HTML/CSS</h3>
+                <h3>98%</h3>
+                <div class="innerBar">
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <h3>PHOTOGRAPHY</h3>
+                <h3>65%</h3>
+                <div class="innerBar">
+                    <div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar">
+                <h3>UX / UI DESIGN</h3>
+                <h3>95%</h3>
+                <div class="innerBar">
+                    <div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <section class="lastInfo" id="about">
+        <div class="infoSuperContainer">
+            <div class="infoContainer">
+                <h2>ABOUT THIS</h2>
+                <hr />
+                <h3>PSD to HTML/CSS/JS<br>Proin nulla felis, volutpat nec arcu at, convallis suscipit neque. Ut nec lorem laoreet,
+                    efficitur libero non, tempus risus. Sed eu tincidunt eros.</h3>
+            </div>
+            <div class="infoContainer">
+                <h2>ABOUT THAT</h2>
+                <hr />
+                <h3>Plorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu lacinia odio, id sollicitudin orci. Duis
+                    ut ligula at neque iaculis commodo.</h3>
+            </div>
+            <div class="infoContainer">
+                <h2>ABOUT THESE</h2>
+                <hr />
+                <h3>Proin nulla felis, volutpat nec arcu at, convallis suscipit neque. Ut nec lorem laoreet, efficitur libero
+                    non, tempus risus.</h3>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h3>&copy; 2016 Alessio Pragliola.All Rights Reserved.</h3>
+        <div class="socialLinks">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            <i class="fa fa-google-plus" aria-hidden="true"></i>
+            <i class="fa fa-tumblr" aria-hidden="true"></i>
+            <i class="fa fa-stumbleupon" aria-hidden="true"></i>
+            <i class="fa fa-wordpress" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-dribbble" aria-hidden="true"></i>
+        </div>
+    </footer>
 </body>
+
 </html>
